@@ -8,6 +8,8 @@ Un workflow **n8n gratuit** qui calcule chaque semaine un **signal DCA Bitcoin b
 
 > Outil logiciel à visée pédagogique. Ce n'est pas un conseil en investissement. Les crypto-actifs peuvent perdre tout ou partie de leur valeur.
 
+> **English:** free n8n workflow that computes a weekly Bitcoin DCA signal from the 200-day moving average (public Coinbase API, no key, no orders placed) and sends it to Telegram. Import [`workflows/signal-dca-mm200-telegram-en.json`](workflows/signal-dca-mm200-telegram-en.json) (notes in English), add a Telegram credential, set `TELEGRAM_CHAT_ID` in the Configuration node, run once, then activate. Not financial advice.
+
 ## Ce que vous recevez chaque lundi
 
 ```
@@ -33,7 +35,7 @@ L'objectif n'est pas de « battre le marché » mais de **réduire l'exposition 
 
 1. **n8n** : une instance cloud ou auto-hébergée (version 1.x).
 2. **Bot Telegram** : créez-le avec [@BotFather](https://t.me/BotFather), gardez le jeton, puis récupérez votre identifiant de chat (par exemple avec [@userinfobot](https://t.me/userinfobot)).
-3. **Import** : dans n8n, *Workflows → Import from File* → `workflows/signal-dca-mm200-telegram.json`.
+3. **Import** : dans n8n, *Workflows → Import from File* → `workflows/signal-dca-mm200-telegram.json` (notes en français) ou `workflows/signal-dca-mm200-telegram-en.json` (notes en anglais, message Telegram en anglais).
 4. **Credential** : ouvrez le nœud *Telegram*, créez un credential « Telegram API » avec le jeton du bot.
 5. **Configuration** : dans le nœud *Configuration*, renseignez `TELEGRAM_CHAT_ID` et ajustez les réglages.
 6. **Test** : cliquez sur *Execute workflow*. Le message doit arriver sur Telegram.
